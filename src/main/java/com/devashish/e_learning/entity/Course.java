@@ -1,8 +1,16 @@
 package com.devashish.e_learning.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.ManyToAny;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +24,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @Table(name = "Course")
 public class Course {
-    @Id    
-    private Long course_id;
+    @Id 
+    private Long courseid;
 
     private Long course_fee;
 
@@ -27,4 +35,9 @@ public class Course {
 
     private String course_name;
 
+    // @ManyToOne(
+    //     fetch = FetchType.LAZY,
+    //     cascade = CascadeType.ALL
+    // )
+    // private Users users;
 }
