@@ -1,5 +1,7 @@
 package com.devashish.e_learning.service;
 
+import java.util.List;
+
 import com.devashish.e_learning.entity.Course;
 import com.devashish.e_learning.repository.CourseRepository;
 
@@ -16,6 +18,12 @@ public class CourseServiceImpl implements CourseService{
     @Override
     public Course saveCourse(Course course) {
         return courseRepository.save(course);
+    }
+
+
+    @Override
+    public List<Course> getCourses() {
+        return courseRepository.findAll();
     }
     
 }

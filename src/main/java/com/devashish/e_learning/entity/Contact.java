@@ -33,14 +33,16 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long contact_id;
 
-    @ManyToOne(
-        cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-        name = "userid",
-        referencedColumnName = "userid"
-    )
-    private Users user;
+    // @ManyToOne(
+    //     cascade = CascadeType.ALL
+    // )
+    // @JoinColumn(
+    //     name = "userid",
+    //     referencedColumnName = "userid"
+    // )
+    // private Users user;
+
+    private Long userid;
 
     private String name;
 
