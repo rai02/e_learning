@@ -6,7 +6,9 @@ import com.devashish.e_learning.entity.Contact;
 import com.devashish.e_learning.repository.ContactRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ContactServiceImpl implements ContactService{
 
     @Autowired

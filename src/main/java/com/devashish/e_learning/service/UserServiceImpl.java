@@ -1,5 +1,6 @@
 package com.devashish.e_learning.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.devashish.e_learning.entity.Course;
@@ -38,6 +39,11 @@ public class UserServiceImpl implements UserService{
             return user.get();
         }
         return user.get();
+    }
+
+    @Override
+    public List<Users> getAllUsers() {
+        return userRepository.findAll();
     }
     
 }
